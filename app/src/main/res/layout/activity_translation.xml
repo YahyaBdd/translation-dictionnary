@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TranslationActivity"
+    android:background="@drawable/gradient_bg">
+
+    <EditText
+        android:id="@+id/TextToTranslate"
+        android:layout_width="217dp"
+        android:layout_height="147dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="188dp"
+        android:ems="10"
+        android:hint="Entre du texte"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/Translate"
+        style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Traduire"
+        android:textColor="#42CBED"
+        app:icon="@android:drawable/stat_notify_sync"
+        app:iconTint="#42CBED"
+        app:layout_constraintEnd_toEndOf="@+id/TextToTranslate"
+        app:layout_constraintStart_toStartOf="@+id/TextToTranslate"
+        app:layout_constraintTop_toBottomOf="@+id/TextToTranslate" />
+
+    <EditText
+        android:id="@+id/TranslatedText"
+        android:layout_width="217dp"
+        android:layout_height="147dp"
+        android:ems="10"
+        android:hint="Entre du texte"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/Translate"
+        app:layout_constraintStart_toStartOf="@+id/Translate"
+        app:layout_constraintTop_toBottomOf="@+id/Translate" />
+
+    <Spinner
+        android:id="@+id/fromSpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/TextToTranslate"
+        app:layout_constraintStart_toEndOf="@+id/TextToTranslate"
+        app:layout_constraintTop_toTopOf="@+id/TextToTranslate" />
+
+    <Spinner
+        android:id="@+id/toSpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/TranslatedText"
+        app:layout_constraintStart_toEndOf="@+id/TranslatedText"
+        app:layout_constraintTop_toTopOf="@+id/TranslatedText" />
+</androidx.constraintlayout.widget.ConstraintLayout>
